@@ -77,7 +77,7 @@
   // ----- Home page enquiry form: submit to n8n webhook -----
   var homeForm = document.getElementById('quote-form-home');
   if (homeForm) {
-    var webhookUrl = 'https://adzoo.app.n8n.cloud/webhook-test/appointments';
+    var webhookUrl = 'https://adzoo.app.n8n.cloud/webhook/appointments';
     var submitBtnText = 'Send My Enquiry →';
     var errorAlert = 'Something went wrong. Please try again or call us directly on 01 234 5678.';
 
