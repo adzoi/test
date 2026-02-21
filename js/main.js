@@ -120,7 +120,9 @@
           });
         })
         .then(function (result) {
-          if (result.ok && result.data && result.data.status === 'success') {
+          // Handle both { status: 'success' } and { data: { status: 'success' } }
+          var body = (result.data && result.data.data) ? result.data.data : result.data;
+          if (result.ok && body && body.status === 'success') {
             if (btn) btn.textContent = '✅ Confirmed! Check your email.';
             setTimeout(function () {
               homeForm.reset();
