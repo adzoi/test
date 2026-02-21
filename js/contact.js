@@ -81,8 +81,10 @@
           });
         })
         .then(function (result) {
-          if (result.ok && result.data && result.data.status === 'success') {
-            successEl.textContent = result.data.message || 'Your appointment is confirmed! Check your email for details.';
+          // Handle both { status: 'success' } and { data: { status: 'success' } }
+          var body = (result.data && result.data.data) ? result.data.data : result.data;
+          if (result.ok && body && body.status === 'success') {
+            successEl.textContent = body.message || 'Your appointment is confirmed! Check your email for details.';
             successEl.hidden = false;
             formCol.classList.add('form-submitted');
             successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
