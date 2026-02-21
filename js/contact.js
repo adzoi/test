@@ -37,7 +37,7 @@
   const form = document.getElementById('quote-form');
   const successEl = document.getElementById('form-success');
   const formCol = form && form.closest('.contact-page__right');
-  const WEBHOOK_URL = 'https://adzoo.app.n8n.cloud/webhook-test/appointments';
+  const WEBHOOK_URL = 'https://adzoo.app.n8n.cloud/webhook/appointments';
   const SUBMIT_BTN_TEXT = 'Send My Enquiry →';
   const ERROR_ALERT = 'Something went wrong. Please try again or call us directly on 01 234 5678.';
 
